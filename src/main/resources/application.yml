@@ -38,7 +38,7 @@ spring:
 
 logging:
   level:
-    root: DEBUG
+    root: INFO
 
 polar:
   catalog-service-uri: "http://localhost:9001"

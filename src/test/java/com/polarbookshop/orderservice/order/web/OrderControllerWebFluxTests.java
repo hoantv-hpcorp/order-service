@@ -1,14 +1,12 @@
 package com.polarbookshop.orderservice.order.web;
 
 import com.polarbookshop.orderservice.book.BookClientException;
-import com.polarbookshop.orderservice.order.domain.Order;
 import com.polarbookshop.orderservice.order.domain.OrderService;
 import org.junit.jupiter.api.Test;
-import reactor.core.publisher.Mono;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,7 +18,7 @@ class OrderControllerWebFluxTests {
 	@Autowired
 	private WebTestClient webClient;
 
-	@MockBean
+	@MockitoBean
 	private OrderService orderService;
 
 	@Test
